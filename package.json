@@ -1,0 +1,61 @@
+{
+  "name": "admin-template",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:analyzer": "vite build --mode analyzer",
+    "preview": "vite preview",
+    "lint": "eslint --fix --ext .js,.vue src",
+    "prepare": "husky && echo npx lint-staged > .husky/pre-commit"
+  },
+  "lint-staged": {
+    "./src/**/*.{js,jsx,vue,json}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^1.1.4",
+    "axios": "^1.0.0",
+    "c-scrollbar": "^1.0.2",
+    "core-js": "^3.8.3",
+    "element-plus": "^2.2.26",
+    "file-saver": "^2.0.5",
+    "js-cookie": "3.0.1",
+    "jsencrypt": "3.2.1",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.14",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.15"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.4",
+    "@vue/compiler-sfc": "3.2.36",
+    "@vueuse/core": "^10.9.0",
+    "dayjs": "^1.11.10",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.22.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "mitt": "^3.0.1",
+    "rollup-plugin-progress": "^1.1.2",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "sass": "^1.69.7",
+    "sass-loader": "^13.3.3",
+    "unplugin-auto-import": "^0.8.5",
+    "unplugin-element-plus": "^0.8.0",
+    "unplugin-icons": "^0.18.3",
+    "unplugin-vue-components": "^0.26.0",
+    "unplugin-vue-define-options": "^1.4.2",
+    "vite": "^4.0.0",
+    "vite-build-git-info": "^1.0.3",
+    "vite-plugin-compression": "0.5.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-svg-icons": "2.0.1",
+    "vue-eslint-parser": "^9.4.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

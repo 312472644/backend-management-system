@@ -1,0 +1,137 @@
+:root {
+  --el-color-primary: #2d8cf0 !important;
+  --el-color-success: #19be6b !important;
+  --el-color-warning: #ff9900 !important;
+  --el-color-danger: #ed4014 !important;
+  --el-color-error: #ed4014 !important;
+  --el-color-text: #515a6e !important;
+  --el-text-color-regular: #515a6e !important;
+  --el-bg-color: #f8f8f9 !important;
+}
+
+.el-dialog {
+  --el-dialog-margin-top: 10vh !important;
+}
+
+// 表格样式
+.el-table {
+  .el-table__header {
+    .cell {
+      color: #515a6e;
+    }
+  }
+}
+
+// 树形结构样式
+.el-tree {
+  .el-tree-node {
+    &.is-current {
+      .el-tree-node__label {
+        color: #2d8cf0;
+      }
+    }
+  }
+}
+
+// 模态框
+.el-dialog {
+  .el-dialog__header {
+    margin-right: 0;
+    border-bottom: 1px solid #ebeef5;
+  }
+  .el-dialog__body {
+    padding: 20px 16px;
+  }
+  .el-dialog__footer {
+    padding: 20px 16px;
+  }
+  .el-form {
+    .el-form-item__label {
+      font-weight: normal;
+    }
+    .suffix-item {
+      .el-input {
+        width: calc(100% - 30px) !important;
+      }
+      .suffix-name {
+        display: inline-block;
+        width: 30px;
+        text-align: center;
+      }
+    }
+    .el-form-item__content {
+      .el-input,
+      .el-select {
+        width: 100%;
+      }
+    }
+    .el-date-editor {
+      .el-input__wrapper {
+        width: 100%;
+      }
+    }
+  }
+  background: #fff !important;
+}
+
+// 抽屉
+.el-drawer {
+  .el-drawer__header {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #ebeef5;
+  }
+  background: #fff !important;
+}
+
+// 卡片
+.el-card {
+  border: none !important;
+  .el-card__header {
+    padding: 14px 16px;
+    color: #303133;
+  }
+}
+
+.el-table {
+  .el-link__inner {
+    font-size: 13px;
+  }
+}
+
+.el-input__inner::selection {
+  color: #fff;
+  background: #3367d1;
+}
+
+.el-tree .el-tree-node.is-current .el-tree-node__label {
+  color: inherit;
+}
+
+.el-tree--highlight-current
+  .el-tree-node.is-current
+  > .el-tree-node__content
+  > .el-tree-node__label {
+  color: #2d8cf0;
+}
+
+.el-form.el-form--inline {
+  .el-form-item {
+    margin-right: 16px;
+  }
+}
+
+.el-pagination.is-background {
+  .number,
+  .more,
+  button {
+    color: #808695;
+    border: 1px solid #e4e7ed;
+    background-color: #fff !important;
+    &.is-active {
+      color: #2d8cf0 !important;
+      font-weight: normal;
+      border: 1px solid #2d8cf0;
+    }
+  }
+}

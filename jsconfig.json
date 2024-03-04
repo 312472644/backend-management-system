@@ -1,0 +1,14 @@
+{
+  "allowJs": true,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "~": ["./"]
+    }
+  },
+  "resolveExtensions": [".js", ".vue", ".json"],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/node_modules/*", "dist"]
+}
