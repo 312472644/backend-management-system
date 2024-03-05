@@ -143,10 +143,8 @@ function hasTitle(title) {
   padding-left: 25px;
 }
 .custom-svg-icon {
-  // width: 2em;
-  // height: 2em;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 .submenu-title-noDropdown {
   height: auto !important;

@@ -1,63 +1,40 @@
 <template>
-  <div>
-    <base-query-layout>
-      <template #query>
-        <el-form inline>
-          <el-form-item label="姓名">
-            <el-input v-model="form.name" placeholder="请输入姓名"></el-input>
-          </el-form-item>
-          <el-form-item label="">
-            <el-button type="primary">查询</el-button>
-            <el-button>重置</el-button>
-          </el-form-item>
-        </el-form>
-      </template>
-      <template #btn>
-        <el-button type="primary" :icon="Plus">新增</el-button>
-      </template>
-      <template #body>
-        <el-table :data="tableData" style="width: 100%">
-          <el-table-column prop="date" label="日期" width="180"></el-table-column>
-          <el-table-column prop="name" label="姓名" width="180"></el-table-column>
-          <el-table-column prop="address" label="地址"></el-table-column>
-        </el-table>
-        <el-pagination
-          background
-          layout="prev, pager, next, jumper, total"
-          :total="400"
-          :page-size="10"
-          style="margin-top: 16px"
-        />
-      </template>
-    </base-query-layout>
-  </div>
+  <base-query-page ref="basePageQueryRef">
+    <template #query>
+      <el-form :model="basePageQueryRef.queryForm" inline>
+        <el-form-item label="送样编号">
+          <el-input placeholder="送样编号" />
+        </el-form-item>
+        <el-form-item label="生产厂家">
+          <el-input placeholder="生产厂家" />
+        </el-form-item>
+        <el-form-item label="材料规格">
+          <el-select>
+            <el-option label="材料规格1" value="1"></el-option>
+            <el-option label="材料规格2" value="2"></el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" @click="basePageQueryRef.handleQueryForm">查询</el-button>
+          <el-button @click="basePageQueryRef.handleResetForm">重置</el-button>
+        </el-form-item>
+      </el-form>
+    </template>
+    <template #column>
+      <el-table-column align="center" label="序号" type="index" width="65px"></el-table-column>
+      <el-table-column prop="name" align="center" label="送样编号"></el-table-column>
+      <el-table-column prop="email" align="center" label="生产厂家" />
+      <el-table-column prop="datetime" align="center" label="产品批次号"></el-table-column>
+      <el-table-column prop="name" align="center" label="规格型号"></el-table-column>
+      <el-table-column prop="name" align="center" label="样品数量"></el-table-column>
+      <el-table-column prop="name" align="center" label="检验结果"></el-table-column>
+    </template>
+  </base-query-page>
 </template>
 <script setup>
-import { Plus } from '@element-plus/icons-vue';
-
-const form = reactive({
+const queryForm = ref({
   name: '',
 });
-const tableData = ref([
-  {
-    date: '2016-05-02',
-    name: '王小虎',
-    address: '上海市普陀区金沙江路 1518 弄',
-  },
-  {
-    date: '2016-05-04',
-    name: '王小虎',
-    address: '上海市普陀区金沙江路 1517 弄',
-  },
-  {
-    date: '2016-05-01',
-    name: '王小虎',
-    address: '上海市普陀区金沙江路 1519 弄',
-  },
-  {
-    date: '2016-05-03',
-    name: '王小虎',
-    address: '上海市普陀区金沙江路 1516 弄',
-  },
-]);
+
+const basePageQueryRef = ref({ queryForm });
 </script>

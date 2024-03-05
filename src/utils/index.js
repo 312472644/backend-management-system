@@ -127,3 +127,26 @@ export function exitFullScreen(element) {
     dom.msExitFullscreen();
   }
 }
+
+/**
+ * 清除对象的值
+ * @param {object} target // 目标对象
+ */
+export function clearObjectValue(target) {
+  if (!target) return;
+  if (Object.keys(target)?.length === 0) return;
+  for (const prop in target) {
+    const value = target[prop];
+    if (typeof value === 'string' || value instanceof Date) {
+      target[prop] = '';
+    } else if (typeof value === 'number') {
+      target[prop] = 0;
+    } else if (typeof value === 'boolean') {
+      target[prop] = false;
+    } else if (Array.isArray(value)) {
+      target[prop] = [];
+    } else if (typeof value === 'object') {
+      clearObjectValue(value);
+    }
+  }
+}
