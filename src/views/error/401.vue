@@ -18,12 +18,15 @@
   margin: 0 auto;
   height: 80vh;
   min-height: 500px;
+
   .exception-img {
     flex: 0 0 62.5%;
     width: 62.5%;
   }
+
   .exception-content {
     flex: auto;
+
     h1 {
       margin-bottom: 24px;
       color: #515a6e;
@@ -31,6 +34,7 @@
       font-size: 72px;
       line-height: 72px;
     }
+
     .exception-content-desc {
       margin-bottom: 16px;
       color: #808695;

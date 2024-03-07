@@ -4,15 +4,19 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run lint && vite build",
     "build:analyzer": "vite build --mode analyzer",
     "preview": "vite preview",
     "lint": "eslint --fix --ext .js,.vue src",
+    "lint:stylelint": "stylelint src/**/*.{css,scss,vue} --fix",
     "prepare": "husky && echo npx lint-staged > .husky/pre-commit"
   },
   "lint-staged": {
     "./src/**/*.{js,jsx,vue,json}": [
       "eslint --fix"
+    ],
+    "./src/**/*.{css,scss,vue}": [
+      "stylelint --fix"
     ]
   },
   "dependencies": {
@@ -53,7 +57,13 @@
     "vite-plugin-compression": "0.5.1",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-svg-icons": "2.0.1",
-    "vue-eslint-parser": "^9.4.2"
+    "vue-eslint-parser": "^9.4.2",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.2.1"
   },
   "engines": {
     "node": ">=18.0.0"

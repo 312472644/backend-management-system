@@ -142,13 +142,16 @@ function hasTitle(title) {
 .submenu-node {
   padding-left: 25px;
 }
+
 .custom-svg-icon {
   width: 20px;
   height: 20px;
 }
+
 .submenu-title-noDropdown {
   height: auto !important;
   line-height: 33px !important;
+
   ::v-deep .el-menu-tooltip__trigger {
     padding: 0 !important;
     position: relative !important;

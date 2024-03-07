@@ -47,9 +47,7 @@
           <img :src="codeUrl" @click="getCode" class="login-code-img" />
         </div>
       </el-form-item>
-      <el-checkbox v-model="loginForm.rememberMe" style="margin: 0px 0px 25px 0px"
-        >记住密码</el-checkbox
-      >
+      <el-checkbox v-model="loginForm.rememberMe" style="margin: 0 0 25px">记住密码</el-checkbox>
       <el-form-item style="width: 100%">
         <el-button
           class="btn-login"
@@ -162,6 +160,7 @@ getCookie();
   background-image: url('../assets/images/login-bg-2.svg');
   background-size: cover;
 }
+
 .img-bg {
   position: absolute;
   width: 80%;
@@ -170,9 +169,9 @@ getCookie();
 }
 
 .title {
-  color: $titleColor;
+  color: $title-color;
   font-size: 20px;
-  margin: 0px auto 30px auto;
+  margin: 0 auto 30px;
   text-align: center;
 }
 
@@ -180,34 +179,41 @@ getCookie();
   border-radius: 6px;
   background: #ffffff;
   width: 400px;
-  padding: 25px 25px 5px 25px;
-  box-shadow: 1px 1px 5px #ccc;
+  padding: 25px 25px 5px;
+  box-shadow: 1px 1px 5px #cccccc;
+
   .el-input {
     height: 40px;
+
     input {
       height: 40px;
     }
   }
+
   .input-icon {
     height: 39px;
     width: 14px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
+
 .login-tip {
   font-size: 13px;
   text-align: center;
   color: #bfbfbf;
 }
+
 .login-code {
   width: 33%;
   height: 40px;
   float: right;
+
   img {
     cursor: pointer;
     vertical-align: middle;
   }
 }
+
 .el-login-footer {
   height: 40px;
   line-height: 40px;
@@ -215,16 +221,17 @@ getCookie();
   bottom: 0;
   width: 100%;
   text-align: center;
-  color: #fff;
-  font-family: Arial;
+  color: #ffffff;
   font-size: 12px;
   letter-spacing: 1px;
 }
+
 .login-code-img {
   height: 40px;
   padding-left: 12px;
 }
+
 .btn-login {
-  background: linear-gradient(to right, $primaryColor, #0059b2);
+  background: linear-gradient(to right, $primary-color, #0059b2);
 }
 </style>

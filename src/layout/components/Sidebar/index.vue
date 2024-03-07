@@ -53,10 +53,12 @@ const activeMenu = computed(() => {
   ::v-deep {
     .el-menu-item {
       position: relative;
-      color: $textContentColor !important;
+      color: $text-content-color !important;
+
       &.is-active {
         background-color: #f0faff !important;
-        color: $primaryColor !important;
+        color: $primary-color !important;
+
         &::after {
           content: '';
           position: absolute;
@@ -68,11 +70,13 @@ const activeMenu = computed(() => {
         }
       }
     }
+
     .el-sub-menu {
       .el-sub-menu__title {
-        color: $textContentColor !important;
+        color: $text-content-color !important;
       }
     }
+
     .el-menu--vertical .el-menu-item {
       height: auto;
       line-height: auto;
@@ -83,21 +87,24 @@ const activeMenu = computed(() => {
 <style lang="scss">
 .el-popper {
   border: none !important;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 6px rgb(0 0 0 / 20%);
 }
+
 .el-menu--vertical {
   .el-menu--popup {
     min-width: 150px !important;
   }
+
   .el-menu-item {
     height: 33px;
     line-height: 33px;
-    color: $textContentColor !important;
+    color: $text-content-color !important;
     font-size: 14px !important;
     padding: 7px 16px;
+
     &.is-active {
-      background-color: $menuHoverColor !important;
-      color: $primaryColor !important;
+      background-color: $menu-hover-color !important;
+      color: $primary-color !important;
     }
   }
 }

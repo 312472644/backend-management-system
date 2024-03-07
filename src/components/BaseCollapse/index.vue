@@ -2,8 +2,8 @@
   <div class="collapse-box" :class="{ shirk: isShrink }">
     <div class="left-collapse-panel" ref="leftPanelRef">
       <div class="fold" @click="handleClick" style="padding-top: 2px">
-        <el-icon v-if="!isShrink" style="color: #fff"><ArrowRight /></el-icon>
-        <el-icon v-else style="color: #fff"><ArrowLeft /></el-icon>
+        <el-icon v-if="!isShrink" style="color: #ffffff"><ArrowRight /></el-icon>
+        <el-icon v-else style="color: #ffffff"><ArrowLeft /></el-icon>
       </div>
       <div v-if="isShrink" class="overlay-mask"></div>
       <slot name="left"></slot>
@@ -44,7 +44,9 @@ const rightPanelRef = ref(null);
 const handleClick = () => {
   isShrink.value = !isShrink.value;
   leftPanelRef.value.style.width = isShrink.value ? props.shirkWidth + 'px' : initWidth + 'px';
-  rightPanelRef.value.style.width = `calc(100% - ${isShrink.value ? props.shirkWidth : initWidth}px)`;
+  rightPanelRef.value.style.width = `calc(100% - ${
+    isShrink.value ? props.shirkWidth : initWidth
+  }px)`;
   emits('collapse', isShrink.value);
 };
 
@@ -68,35 +70,37 @@ onMounted(() => init());
   width: 100%;
   height: 100%;
   display: flex;
+
   &.shirk {
     .left-collapse-panel {
       overflow: hidden;
     }
   }
+
   .left-collapse-panel {
     position: relative;
+
     .fold {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       right: 0;
       z-index: 999;
-      background-color: #999;
+      background-color: #999999;
       height: 50px;
       line-height: 50px;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
+
       &:hover {
         cursor: pointer;
       }
     }
+
     .overlay-mask {
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: $mainBgColor;
+      inset: 0;
+      background-color: $main-bg-color;
       z-index: 998;
     }
   }

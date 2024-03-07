@@ -6,11 +6,14 @@
     .sidebar-title {
       color: $dark-active-text-color !important;
     }
+
     .sidebar-logo-container {
       border: 1px solid $dark-menu-active-bg-color;
     }
+
     .sidebar-container {
       background-color: $dark-sidebar-bg !important;
+
       .el-menu-item {
         color: $dark-text-color !important;
         background-color: $dark-sidebar-bg !important;
@@ -19,31 +22,37 @@
       .el-menu-item.is-active {
         background-color: $dark-menu-active-bg-color !important;
         color: $dark-active-text-color !important;
+
         &::after {
           display: none;
         }
       }
     }
+
     .el-menu--vertical .el-menu-item:not(.is-active):hover {
       color: $dark-active-text-color !important;
       background-color: $dark-sidebar-bg !important;
     }
+
     .el-sub-menu[role='menuitem'] {
       .el-sub-menu__title {
         color: $dark-text-color !important;
         background-color: $dark-sidebar-bg !important;
       }
+
       .el-sub-menu__title:not(.is-active):hover {
         color: $dark-active-text-color !important;
         background-color: $dark-sidebar-bg !important;
       }
+
       &.is-active {
         .el-menu-item.is-active {
           color: $dark-active-text-color !important;
-          background-color: $primaryColor !important;
+          background-color: $primary-color !important;
         }
       }
     }
+
     .el-menu--vertical {
       &.el-menu--collapse {
         .el-sub-menu.is-active {
@@ -61,13 +70,16 @@
   .el-menu {
     background-color: $dark-sidebar-bg !important;
   }
+
   .el-menu-item {
     color: $dark-not-active-color !important;
+
     &.is-active {
-      background-color: $primaryColor !important;
+      background-color: $primary-color !important;
       color: $dark-active-text-color !important;
     }
   }
+
   .el-menu-item:not(.is-active):hover {
     color: $dark-active-text-color !important;
   }

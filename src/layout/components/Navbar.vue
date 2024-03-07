@@ -107,8 +107,8 @@ function handleFullScreen() {
   height: $nav-bar-height;
   overflow: hidden;
   position: relative;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgb(0 21 41 / 8%);
 
   .hamburger-container {
     line-height: calc(#{$nav-bar-height} - 4px);
@@ -119,7 +119,7 @@ function handleFullScreen() {
     -webkit-tap-highlight-color: transparent;
 
     &:hover {
-      background: rgba(0, 0, 0, 0.025);
+      background: rgb(0 0 0 / 2.5%);
     }
   }
 
@@ -159,7 +159,7 @@ function handleFullScreen() {
         transition: background 0.3s;
 
         &:hover {
-          background: rgba(0, 0, 0, 0.025);
+          background: rgb(0 0 0 / 2.5%);
         }
       }
     }
@@ -168,9 +168,11 @@ function handleFullScreen() {
       display: flex;
       align-items: center;
       font-size: 13px;
+
       &:not(:last-child) {
         margin-right: 20px;
       }
+
       &:hover {
         cursor: pointer;
       }
@@ -183,8 +185,9 @@ function handleFullScreen() {
         position: relative;
         display: flex;
         align-items: center;
+
         .avatar-name {
-          color: $textContentColor;
+          color: $text-content-color;
           font-size: 13px;
           padding: 0 5px;
         }

@@ -736,13 +736,15 @@ getList();
   .left,
   .right {
     padding: 16px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 3px;
   }
+
   .left {
     width: 250px;
-    border-right: 10px solid $mainBgColor;
+    border-right: 10px solid $main-bg-color;
   }
+
   .right {
     :deep {
       .el-form-item__label {
@@ -750,6 +752,7 @@ getList();
       }
     }
   }
+
   :deep {
     .el-tree-node__label {
       width: 100%;

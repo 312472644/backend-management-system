@@ -52,19 +52,22 @@ defineExpose({
 .icon-body {
   width: 100%;
   padding: 10px;
+
   .icon-list {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
     height: 200px;
     overflow-y: auto;
+
     div {
       display: flex;
       align-items: center;
       cursor: pointer;
     }
+
     span {
-      fill: currentColor;
+      fill: currentcolor;
       overflow: hidden;
     }
   }

@@ -88,8 +88,9 @@ function handleCurrentChange(val) {
 
 <style lang="scss" scoped>
 .pagination-container {
-  background: #fff;
-  padding: 16px 16px 0 16px;
+  background: #ffffff;
+  padding: 16px 16px 0;
+
   :deep {
     .el-pagination {
       display: flex;
@@ -97,6 +98,7 @@ function handleCurrentChange(val) {
     }
   }
 }
+
 .pagination-container.hidden {
   display: none;
 }

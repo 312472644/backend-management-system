@@ -60,8 +60,9 @@ const hasEmptySlot = computed(() => slots.empty);
   justify-content: center;
   width: inherit;
   height: inherit;
+
   .empty-text {
-    color: $subColor;
+    color: $sub-color;
     font-size: 14px;
   }
 }

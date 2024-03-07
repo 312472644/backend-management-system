@@ -96,4 +96,3 @@ defineExpose({
   handleQueryForm,
 });
 </script>
-<style lang="scss" scoped></style>

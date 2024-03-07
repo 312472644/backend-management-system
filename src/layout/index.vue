@@ -65,7 +65,7 @@ function setLayout() {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/mixin.scss';
+@import '@/assets/styles/mixin';
 
 .app-wrapper {
   @include clearfix;
@@ -80,7 +80,7 @@ function setLayout() {
 }
 
 .drawer-bg {
-  background: #000;
+  background: #000000;
   opacity: 0.3;
   width: 100%;
   top: 0;

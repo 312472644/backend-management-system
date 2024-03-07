@@ -61,7 +61,7 @@ const title = ref(import.meta.env.VITE_APP_TITLE);
     & .sidebar-title {
       display: inline-block;
       margin: 0;
-      color: $titleColor;
+      color: $title-color;
       font-weight: 600;
       line-height: 50px;
       font-size: 13px;
@@ -71,7 +71,7 @@ const title = ref(import.meta.env.VITE_APP_TITLE);
 
   &.collapse {
     .sidebar-logo {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 }

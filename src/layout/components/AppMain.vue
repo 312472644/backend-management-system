@@ -24,6 +24,7 @@ const tagsViewStore = useTagsViewStore();
   position: relative;
   overflow: hidden;
   background: #f5f7f9;
+
   // .page-container {
   //   min-height: calc(100vh - 104px);
   //   background: #fff;

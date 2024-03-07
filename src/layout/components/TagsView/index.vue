@@ -249,11 +249,12 @@ function handleScroll() {
   width: 100%;
   padding-bottom: 6px;
   background: #f5f7f9;
+
   .tags-view-wrapper {
     .tags-view-item {
       position: relative;
       display: inline-block;
-      padding: 0px 8px 4px;
+      padding: 0 8px 4px;
       margin-top: 5px;
       margin-right: 6px;
       height: 27px;
@@ -266,18 +267,21 @@ function handleScroll() {
       &:first-of-type {
         margin-left: 10px;
       }
+
       &:last-of-type {
         margin-right: 10px;
       }
+
       &.active {
-        color: #fff;
-        background-color: $primaryColor;
+        color: #ffffff;
+        background-color: $primary-color;
       }
     }
   }
+
   .contextmenu {
     margin: 0;
-    background: #fff;
+    background: #ffffff;
     z-index: 3000;
     position: absolute;
     list-style-type: none;
@@ -285,8 +289,9 @@ function handleScroll() {
     border-radius: 4px;
     font-size: 12px;
     font-weight: 400;
-    color: #333;
-    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+    color: #333333;
+    box-shadow: 2px 2px 3px 0 rgb(0 0 0 / 30%);
+
     li {
       margin: 0;
       padding: 7px 16px;
@@ -294,13 +299,14 @@ function handleScroll() {
     }
   }
 }
+
 :deep(.el-scrollbar__wrap) {
   height: auto !important;
 }
 </style>
 
 <style lang="scss">
-//reset element css of el-icon-close
+// reset element css of el-icon-close
 .tags-view-wrapper {
   .tags-view-item {
     .el-icon-close {
@@ -311,7 +317,8 @@ function handleScroll() {
       text-align: center;
       transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
       transform-origin: 100% 50%;
-      &:before {
+
+      &::before {
         transform: scale(0.6);
         display: inline-block;
         vertical-align: -3px;
