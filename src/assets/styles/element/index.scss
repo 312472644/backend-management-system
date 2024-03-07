@@ -29,8 +29,10 @@
     }
   }
 
-  .el-table__cell {
-    padding: 12px 0;
+  .el-table__body {
+    .el-table__cell {
+      padding: 12px 0;
+    }
   }
 
   .el-text {
@@ -159,7 +161,7 @@
     background-color: #ffffff !important;
 
     &.is-active {
-      color: #2d8cf0 !important;
+      color: $primary-color !important;
       font-weight: normal;
       border: 1px solid $primary-color;
     }
